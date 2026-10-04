@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Full Screen Capture</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <main class="card">
+    <div class="brand-row">
+      <div class="logo" aria-hidden="true">⌗</div>
+      <div>
+        <h1>Full Screen Capture</h1>
+        <p class="tagline">Capture your browser screen instantly.</p>
+      </div>
+    </div>
+
+    <section id="start-view" class="view">
+      <button id="capture-button" class="button button-primary" type="button">
+        <span aria-hidden="true">📸</span> Capture Screen
+      </button>
+      <p id="error-message" class="message error" role="alert" hidden></p>
+      <p class="privacy-note">Processed locally on your computer.</p>
+    </section>
+
+    <section id="result-view" class="view" hidden>
+      <div class="success-heading"><span class="check">✓</span> Screenshot captured!</div>
+      <img id="preview" class="preview" alt="Captured browser screen preview">
+      <div class="button-stack">
+        <button id="jpg-button" class="button button-primary" type="button">Download JPG</button>
+        <button id="png-button" class="button button-secondary" type="button">Download PNG</button>
+        <button id="pdf-button" class="button button-secondary" type="button">Download PDF</button>
+        <button id="again-button" class="button button-quiet" type="button">Capture Again</button>
+      </div>
+      <p id="download-message" class="message" role="status" hidden></p>
+    </section>
+  </main>
+  <script src="popup.js"></script>
+</body>
+</html>
